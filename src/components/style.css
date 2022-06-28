@@ -1,0 +1,116 @@
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    transition: all .3s ease-in;
+    border: 1px solid transparent;
+    font-size: .7rem;
+    padding: 2px 2px;
+    padding-bottom: 2px;
+}
+
+form {
+    width: 350px;
+    padding: 3rem 2rem;
+    box-shadow: -5px 3px 0px 1px rgb(103, 130, 248); 
+}
+
+form * label {
+    color: rgb(64, 181, 248);
+    margin: 5px 0;
+}
+
+
+input:focus {
+    outline: none;
+    transform: scale(1.05);
+    border-bottom: 1px solid rgb(93, 128, 243);
+}
+
+input::placeholder {
+    color: white;
+}
+
+.switch--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    position: relative;
+    bottom: 2rem;
+}
+
+.signup {
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-bottom: 1px solid rgba(0, 255, 255, 0);
+    padding-bottom: 3px;
+    transition: all .3s ease-in;
+    transform-origin: left;
+}
+
+.login {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: all .3s ease-in;
+    transform-origin: left;
+}
+
+
+.active {
+    border-bottom: 1px solid cyan;
+}
+
+button[type="submit"] {
+    box-shadow: 0px 0px 7px 4px rgba(48, 233, 208, 0.151);
+}
+
+.signup--container {
+    display: none;
+    opacity: 0;
+    transition: all .3s linear;
+}
+.login--container {
+    display: none;
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.show {
+    display: flex;
+    opacity: 1;
+}
+
+.error {
+    position: absolute;
+    color: white;
+    top: -6.5rem;
+    right: 0;
+    left: 3rem;
+    background: black;
+    padding: 1rem;
+    text-align: center;
+    width: fit-content;
+    border-left: 3px solid rgba(61, 243, 243, 0.685);
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.success {
+    position: absolute;
+    top: -6.5rem;
+    right: 0;
+    left: 0rem;
+    background: black;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 350px;
+    color: white;
+    text-align: center;
+    border-left: 5px solid rgba(0, 255, 255, 0.753); 
+    transition: all .3s ease-in;
+}
