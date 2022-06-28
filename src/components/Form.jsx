@@ -44,9 +44,12 @@ function Form() {
         ])
         setError(false);
         setSubmit(true);
+        setEmail('');
+        setPassword('');
         setInterval(() => {
           setSubmit(false)
         }, 6000)
+        // setName('');
       }
     }
     else {
@@ -62,6 +65,8 @@ function Form() {
           ...loginInfo, {id: Math.random() * 1000, email: email, password: password},
         ])
         setSubmit(true);
+        setEmail('');
+        setPassword('');
         setInterval(() => {
           setSubmit(false)
         }, 6000);
@@ -106,11 +111,13 @@ function Form() {
       loginBtn.classList.remove("active");
       setSignShow(true);
       setLoginShow(false);
+      setSubmit(false);
     } else {
       signupBtn.classList.remove("active");
       loginBtn.classList.add("active");
       setSignShow(false);
       setLoginShow(true);
+      setSubmit(false);
     }
   }
   return (
